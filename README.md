@@ -9,8 +9,11 @@
 1. `Tailwind`
     - `npm install --save-dev tailwindcss postcss autoprefixer`
     - install vscode ext: tailwind, postcss language support
+    - if not working, delete `.next/` folder
     - [OPTIONAL] `npx tailwindcss init --postcss`
     - [OPTIONAL] config setup ([ref](https://nextjs.org/docs/app/building-your-application/styling/tailwind-css))
+1. `Markdown`
+    - `npm install marked`
 
 ## Initialization
 
