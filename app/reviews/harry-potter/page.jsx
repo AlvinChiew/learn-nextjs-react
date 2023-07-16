@@ -1,4 +1,4 @@
-export default function HomePage() {
+export default function HarryPorterPage() {
     return (
         <>
             <h1>Harry Potter Review</h1>

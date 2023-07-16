@@ -1,4 +1,4 @@
-export default function HomePage() {
+export default function StarWarsPage() {
     return (
         <>
             <h1>Star Wars Review</h1>
