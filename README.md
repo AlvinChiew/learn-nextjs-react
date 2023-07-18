@@ -14,6 +14,8 @@
     - [OPTIONAL] config setup ([ref](https://nextjs.org/docs/app/building-your-application/styling/tailwind-css))
 1. `Markdown`
     - `npm install marked`
+    - `npm install -D @tailwindcss/typography`, then add to `plugins` in `tailwind.config.js`
+    - `npm install gray matter`
 
 ## Initialization
 

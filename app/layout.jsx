@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
                 <main className='grow py-3'>
                     {children}
                 </main>
-                <footer className='border-t py-3 text-center text-xs'>
+                <footer className='border-t py-3 text-center text-slate-500 text-xs'>
                     Image in the courtesy of{' '}
                     <a href="http://image.google.com" target="_blank" className='text-orange-800 hover:underline'>
                         Google Image
