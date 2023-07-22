@@ -3,6 +3,16 @@ import NavBar from '@/components/NavBar';
 import { exo2, orbitron } from './fonts';
 import './globals.css';
 
+
+export const metadata = {
+    title: {
+        default: 'Movie Couch',
+        template: '%s | Movie Couch'
+    },
+    descroption: 'Best reviews you can find online',
+    keywords: ['movie', 'review']
+}
+
 export default function RootLayout({ children }) {
     return (
         <html lang="en" className={`${exo2.variable} ${orbitron.variable}`} >

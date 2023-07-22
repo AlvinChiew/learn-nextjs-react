@@ -2,6 +2,11 @@
 // import { marked } from 'marked'
 import Heading from '@/components/Heading';
 
+
+export const metadata = {
+    title: 'Harry Potter'
+}
+
 export default function HarryPorterPage() {
     // const text = await readFile('./content/reviews/harry-potter.md', 'utf8');
     // const html = marked(text, { headerIds: false, mangle: false });

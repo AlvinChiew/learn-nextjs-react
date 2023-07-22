@@ -16,6 +16,10 @@
     - `npm install marked`
     - `npm install -D @tailwindcss/typography`, then add to `plugins` in `tailwind.config.js`
     - `npm install gray matter`
+1. `Icons`
+    - `npm install @heroicons/react`
+1. `Local static deployment`
+    - `npm install serve@latest`
 
 ## Initialization
 
@@ -31,3 +35,14 @@
 ## Deployment
 
 1. ref: [link](https://nextjs.org/docs/app/building-your-application/deploying)
+1. Host:
+    - Dynamic
+        - [Vercel](https://vercel.com/) : supports custom domain, auto-deployment by VCS commit for >= 1 branch, HTTPS cert
+
+    - Static
+
+        - [Netlify]`(<https://app.netlify.com/>)
+            - run `npm run build`
+            - serve content in `/out`
+                - [OPTIONAL] run `npx serve@latest out`
+        - [Nginx](https://github.com/) (ref: [1](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04), [2](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-20-04))
