@@ -41,7 +41,7 @@
 
     - Static
 
-        - [Netlify]`(<https://app.netlify.com/>)
+        - [Netlify](<https://app.netlify.com/>)
             - run `npm run build`
             - serve content in `/out`
                 - [OPTIONAL] run `npx serve@latest out`
