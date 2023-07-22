@@ -46,3 +46,15 @@
             - serve content in `/out`
                 - [OPTIONAL] run `npx serve@latest out`
         - [Nginx](https://github.com/) (ref: [1](https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-ubuntu-22-04), [2](https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-20-04))
+
+## TO-DO
+
+1. Headless CMS: [Strapi](https://strapi.io/)
+    - Store page information
+    - Page editor UI w/ Markdown preview
+    - Admin UI
+    - API to be called by WebApp
+    - ref: [Jamstsack](https://jamstack.org/headless-cms)
+1. Image Optimization
+1. Authentication
+1. Error 404 - fallback
