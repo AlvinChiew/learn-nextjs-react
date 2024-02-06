@@ -39,6 +39,10 @@
    - `npm install serve@latest`
 1. Content Management System (CMS)
    - `npx create-strapi-app@latest <project name>`
+   - `npm install qs`
+1. ESLint
+   - `npm install --save-dev eslint eslint-config-next`
+   - `npm run lint`
 
 ## Deployment
 
