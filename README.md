@@ -1,6 +1,23 @@
 # Getting Started
 
-## Installation
+## Initialization
+
+1. CMS
+   1. `cd cms`
+   1. `npm install`
+   1. `npm run build`
+   1. `npm run start`
+1. Front-end
+   1. run `npm install`
+   1. run
+      - dev: `npm run dev`
+      - [OPTIONAL] prod:
+        - build: `npm run build`
+          - generate static html to load faster in `prod`
+        - start: `npm run start`
+          - optimized for speed. results will be cached and dev hot reload is disabled.
+
+## Dependencies
 
 1. npx - Download [Nodejs](https://nodejs.org/en/download) and install.
 1. NextJS
@@ -23,20 +40,10 @@
 1. Content Management System (CMS)
    - `npx create-strapi-app@latest <project name>`
 
-## Initialization
-
-1. run `npm install`
-1. run
-   - dev: `npm run dev`
-   - [OPTIONAL] prod:
-     - build: `npm run build`
-       - generate static html to load faster in `prod`
-     - start: `npm run start`
-       - optimized for speed. results will be cached and dev hot reload is disabled.
-
 ## Deployment
 
-1. ref: [link](https://nextjs.org/docs/app/building-your-application/deploying)
+ref: [link](https://nextjs.org/docs/app/building-your-application/deploying)
+
 1. Host:
 
    - Dynamic
