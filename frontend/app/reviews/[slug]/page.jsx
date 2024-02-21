@@ -3,16 +3,19 @@ import Heading from '@/components/Heading';
 import ShareBtns from '@/components/ShareBtns';
 import { getReview, getSlugs } from '@/lib/reviews/';
 
+// export const dynamicParams = false; // return Eror 404 for new slug instead of automatically creating and modifying a static page in server
+export const dynamic = 'force-dynamic'; // this page will only be loaded at runtime
+
+// export async function generateStaticParams() {
+//   const slugs = await getSlugs();
+//   return slugs.map((slug) => ({ slug }));
+// }
+
 export async function generateMetadata({ params: { slug } }) {
   const review = await getReview(slug);
   return {
     title: review.title,
   };
-}
-
-export async function generateStaticParams() {
-  const slugs = await getSlugs();
-  return slugs.map((slug) => ({ slug }));
 }
 
 export default async function ReviewPage({ params: { slug } }) {

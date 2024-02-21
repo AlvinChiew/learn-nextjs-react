@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Heading from '@/components/Heading';
 import { getFeaturedReview } from '@/lib/reviews';
 
+export const dynamic = 'force-dynamic'; // this page will only be loaded at runtime
+
 export default async function HomePage() {
   console.log('[HomePage] rendering...');
   const reviews = await getFeaturedReview();
