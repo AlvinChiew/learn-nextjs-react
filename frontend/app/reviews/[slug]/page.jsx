@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 import Heading from '@/components/Heading';
 import ShareBtns from '@/components/ShareBtns';
 import { getReview, getSlugs } from '@/lib/reviews/';
@@ -13,6 +14,7 @@ export const dynamic = 'force-dynamic'; // this page will only be loaded at runt
 
 export async function generateMetadata({ params: { slug } }) {
   const review = await getReview(slug);
+  if (!review) notFound();
   return {
     title: review.title,
   };
@@ -20,6 +22,7 @@ export async function generateMetadata({ params: { slug } }) {
 
 export default async function ReviewPage({ params: { slug } }) {
   const review = await getReview(slug);
+  if (!review) notFound();
   console.log('[ReviewPage] rendering...', slug);
   return (
     <>
