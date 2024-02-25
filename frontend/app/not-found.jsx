@@ -4,7 +4,7 @@ export default function notFoundPage() {
   return (
     <>
       <Heading>Not Found</Heading>
-      <p>This page couldn't be found</p>
+      <p>This page could not be found</p>
     </>
   );
 }

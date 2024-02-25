@@ -2,6 +2,7 @@ import { marked } from 'marked';
 import qs from 'qs';
 
 const CMS_URL = 'http://localhost:1337';
+export const REVIEWS_CACHE_TAG = 'reviews';
 
 export async function getFeaturedReview() {
   const reviews = await getReviews(3);
@@ -51,7 +52,10 @@ async function fetchReviews(parameters) {
   // console.log('[fetchReviews]:', url);
   const response = await fetch(url, {
     // cache: 'no-store', // disbalbing cahce convert pages to dynamic
-    // next: { revalidate: 30 }, // page will be revalidated every 30 seconds when this function is called
+    next: {
+      // revalidate: 30,  // page will be revalidated every 30 seconds when this function is called
+      tags: [REVIEWS_CACHE_TAG],
+    },
   });
   if (!response.ok) {
     throw new Error(`CMS returned ${response.status} for ${url}`);
