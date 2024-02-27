@@ -3,12 +3,12 @@ import Link from 'next/link';
 import Heading from '@/components/Heading';
 import { getFeaturedReview } from '@/lib/reviews';
 
-// export const dynamic = 'force-dynamic'; // this page will only be loaded at runtime
+// export const dynamic = 'force-dynamic'; // this page will only be loaded at runtime without cache
 //export const revalidate = 30;  // refresh info from related static page in the background every 30 seconds when user reload the page
 
 export default async function HomePage() {
   console.log('[HomePage] rendering...');
-  const reviews = await getFeaturedReview();
+  const { reviews } = await getFeaturedReview();
   return (
     <>
       <Heading>Welcome!</Heading>

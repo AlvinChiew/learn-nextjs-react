@@ -1,20 +1,24 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Heading from '@/components/Heading';
+import PaginationBar from '@/components/PaginationBar';
 import { getReviews } from '@/lib/reviews';
-
-// export const dynamic = 'force-dynamic'; // this page will only be loaded at runtime
+// export const dynamic = 'force-dynamic'; // this page will only be loaded at runtime without cache
 //export const revalidate = 30;  // refresh info from related static page in the background every 30 seconds when user reload the page
 
 export const metadata = {
   title: 'Reviews',
 };
 
-export default async function ReviewPage() {
-  const reviews = await getReviews(6);
+const PAGE_SIZE = 8;
+
+export default async function ReviewPage({ searchParams }) {
+  const page = parsePageParam(searchParams.page);
+  const { reviews, pageCount } = await getReviews(PAGE_SIZE, page);
   return (
     <>
       <Heading>Reviews</Heading>
+      <PaginationBar href="/reviews" page={page} pageCount={pageCount} />
       <ul className="flex flex-row flex-wrap gap-3">
         {reviews.map((review, index) => (
           <li
@@ -37,4 +41,14 @@ export default async function ReviewPage() {
       </ul>
     </>
   );
+}
+
+function parsePageParam(paramValue) {
+  if (paramValue) {
+    const page = parseInt(paramValue);
+    if (isFinite(page) && page > 0) {
+      return page;
+    }
+  }
+  return 1;
 }

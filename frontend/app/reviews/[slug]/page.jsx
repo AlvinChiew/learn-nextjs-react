@@ -5,7 +5,7 @@ import ShareBtns from '@/components/ShareBtns';
 import { getReview, getSlugs } from '@/lib/reviews/';
 
 // export const dynamicParams = false; // return Eror 404 for new slug instead of automatically creating and modifying a static page in server
-// export const dynamic = 'force-dynamic'; // this page will only be loaded at runtime
+// export const dynamic = 'force-dynamic'; // this page will only be loaded at runtime without cache
 
 export async function generateStaticParams() {
   const slugs = await getSlugs();
