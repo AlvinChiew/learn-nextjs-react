@@ -12,6 +12,7 @@ export const metadata = {
 
 const PAGE_SIZE = 8;
 
+// searchParam makes page dynamic but data will be stored in cache for reuse without server render
 export default async function ReviewPage({ searchParams }) {
   const page = parsePageParam(searchParams.page);
   const { reviews, pageCount } = await getReviews(PAGE_SIZE, page);
