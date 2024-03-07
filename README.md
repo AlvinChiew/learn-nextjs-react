@@ -44,6 +44,10 @@
 1. ESLint
    - `npm install --save-dev eslint eslint-config-next`
    - `npm run lint`
+1. Server render restriction
+   - `npm install server-only`
+1. Debounce input in search box
+   - `npm install use-debounce`
 
 ## Deployment
 
