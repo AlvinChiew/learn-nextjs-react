@@ -2,7 +2,7 @@ import 'server-only';
 import { marked } from 'marked';
 import qs from 'qs';
 
-const CMS_URL = 'http://localhost:1337';
+const CMS_URL = process.env.CMS_URL;
 export const REVIEWS_CACHE_TAG = 'reviews';
 
 export async function getFeaturedReview() {
@@ -87,6 +87,6 @@ function mapReview(item) {
     title: attributes.title,
     subtitle: attributes.subtitle,
     date: attributes.publishedAt.slice(0, 'yyyy-mm-dd'.length),
-    image: CMS_URL + attributes.image.data.attributes.url,
+    image: new URL(attributes.image.data.attributes.url, CMS_URL).href,
   };
 }
