@@ -25,6 +25,7 @@
    - Manual: `npm install next@latest react@latest react-dom@latest`
 1. Tailwind
    - `npm install --save-dev tailwindcss postcss autoprefixer`
+   - `npm install @headlessui/react`
    - install vscode ext: tailwind, postcss language support
    - if not working, delete `.next/` folder
    - [OPTIONAL] `npx tailwindcss init --postcss`

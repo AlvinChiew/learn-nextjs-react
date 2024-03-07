@@ -48,6 +48,18 @@ export async function getSlugs() {
   return data.map((item) => item.attributes.slug);
 }
 
+export async function getSearchableReviews() {
+  const { data } = await fetchReviews({
+    fields: ['slug', 'title'],
+    sort: ['publishedAt:desc'],
+    pagination: { pageSize: 100 },
+  });
+  return data.map(({ attributes }) => ({
+    slug: attributes.slug,
+    title: attributes.title,
+  }));
+}
+
 async function fetchReviews(parameters) {
   const url =
     `${CMS_URL}/api/reviews?` +
