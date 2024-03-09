@@ -10,7 +10,6 @@ export async function createCommentAction(formData) {
     user: formData.get('user'),
     message: formData.get('message'),
   };
-  console.log('data:', data);
   const error = validate(data);
   if (error) {
     return { isError: true, message: error };

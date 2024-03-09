@@ -66,7 +66,6 @@ async function fetchReviews(parameters) {
   const url =
     `${CMS_URL}/api/reviews?` +
     qs.stringify(parameters, { encodeValuesOnly: true });
-  // console.log('[fetchReviews]:', url);
   const response = await fetch(url, {
     // cache: 'no-store', // disbalbing cahce convert pages to dynamic
     next: {

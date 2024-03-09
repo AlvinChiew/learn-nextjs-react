@@ -14,7 +14,6 @@ const url =
     },
     { encodeValuesOnly: true }
   );
-console.log(url);
 const response = await fetch(url);
 const body = await response.json();
 const reviews = JSON.stringify(body, null, 2);

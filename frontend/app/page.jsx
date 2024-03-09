@@ -7,7 +7,6 @@ import { getFeaturedReview } from '@/lib/reviews';
 //export const revalidate = 30;  // refresh info from related static page in the background every 30 seconds when user reload the page
 
 export default async function HomePage() {
-  console.log('[HomePage] rendering...');
   const { reviews } = await getFeaturedReview();
   return (
     <>

@@ -10,9 +10,7 @@ const db = new PrismaClient({
 //     message: 'Wonderful 3!',
 //   },
 // });
-// console.log('created: ', comment);
 
 const comments = await db.comment.findMany({
   where: { slug: 'fall-guys', user: 'Alvin' },
 });
-console.log('comments:', comments);
