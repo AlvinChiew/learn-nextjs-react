@@ -48,6 +48,13 @@
    - `npm install server-only`
 1. Debounce input in search box
    - `npm install use-debounce`
+1. Prisma Database
+   - `npm install prisma --save-dev`
+   - `npx prisma init --datasource-provider sqlite`
+   - `npx prisma db push`
+   - `choco install sqlite`
+     - connect db: `sqlite3 prisma/dev.db`
+     - show schema: `.schema`
 
 ## Deployment
 
